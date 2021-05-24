@@ -1,0 +1,94 @@
+@import "../../assets/scss/variables.scss";
+
+.liquid-row{
+    align-items: center;
+    padding-top: 4rem;
+    justify-content: space-between;
+    h3{
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .liquid-right{
+        background: $background-primary;
+        border-radius: 40px;
+        padding: 2.5rem;
+        text-align: center;
+        @media screen and (max-width:767px) {
+            margin: 40px auto;
+        }
+        p{
+            font-size: $font-size-base + 1;
+            max-width: 250px;
+            margin: auto;
+        }
+        .ant-list{
+            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+            .ant-list-items{
+                .ant-list-item{
+                    background: $white;
+                    border-radius: 22px;
+                    padding: 15px 22px;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    .ant-list-item-meta{
+                        align-items: center;
+                        text-align: left;
+                        .ant-avatar{
+                            width: 55px;
+                            height: 55px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .icon{
+                                width: 45px;
+                                height: 50px;
+                            }
+                        }
+                        .ant-list-item-meta-content{
+                            .ant-list-item-meta-title{
+                                text-transform: uppercase;
+                                color: $text-color-secondary;
+                                font-size: $font-size-base + 2;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                    .ant-list-item-action{
+                        .select-radio{
+                            border: 2px solid $border-color-base;
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 30px;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 15px;
+                                background: $white;
+                                display: block;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                    }
+                    &.selected{
+                        .ant-list-item-action{
+                            .select-radio{
+                                &::before{
+                                    background: $secondary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

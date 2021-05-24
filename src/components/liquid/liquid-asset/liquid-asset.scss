@@ -1,0 +1,104 @@
+
+@import "../../../assets/scss/variables.scss";
+
+.wallet-address{
+    background: $background-primary;
+    padding: 40px 0;
+    .ant-form-item{
+        .ant-form-item-control-input-content{
+            align-items: center;
+            display: flex;
+            @media screen and (max-width:767px) {
+                display: block;
+            }
+            label{
+                font-size: $font-size-base + 2;
+                width: 20%;
+                margin-right: 50px;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.lock-amount{
+    padding: 40px 0;
+    .ant-form-item{
+        .ant-form-item-control-input-content{
+            align-items: center;
+            display: flex;
+            label{
+                font-size: $font-size-base + 2;
+                width: 80%;
+                margin-right: 30px;
+                text-align: right;
+            }
+            input{
+                font-size: 2rem;
+                text-align: center;
+                color: $text-color-secondary;
+            }
+        }
+    }
+    .amount-bottominfo{
+        margin-top: 10px;
+        span{
+            color: $secondary-color;
+        }
+    }
+    small{
+        width: 100%;
+        display: block;
+    }
+    .right-section{
+        @media screen and (max-width:767px) {
+            margin-top: 60px;
+        }
+    }
+}
+
+.assetsteps-wrapper{
+    .asset-steps-upper{
+        max-width: 750px;
+        margin:20px auto;
+        @media screen and (max-width:767px) {
+            .ant-btn{
+                font-size: $font-size-base + 1;
+                padding: 0 10px;
+                margin-top: 10px;
+            }
+        }
+    }
+    .asset-steps{
+        max-width: 550px;
+        margin: auto;
+        .ant-steps{
+            padding-top: 10px;
+            .ant-steps-item{
+                padding: 0;
+                .ant-steps-item-title{
+                    &:after{
+                        height: 4px;
+                        left: 0;
+                        background: $background-secondary;
+                    }
+                }
+                .ant-steps-item-icon{
+                    width: 38px;
+                    height: 38px;
+                    font-size: $font-size-base + 4;
+                    line-height: 38px;
+                    background: $background-secondary;
+                    border-color: $background-secondary;
+                    margin: 0;
+                }
+                &.ant-steps-item-active{
+                    .ant-steps-item-icon{
+                        background: $primary-color;
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
